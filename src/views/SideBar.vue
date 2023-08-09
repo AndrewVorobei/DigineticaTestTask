@@ -36,43 +36,67 @@
       <div class="attributes-checkbox">
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" checked />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-1"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-1">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-2"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-2">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-3"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-3">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-4"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-4">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-5"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-5">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-6"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-6">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
@@ -83,43 +107,67 @@
       <div class="attributes-checkbox">
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-7"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-7">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-8"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-8">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-9"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-9">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-10"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-10">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-11"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-11">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
         <div class="checkbox">
           <div class="checkbox-left">
-            <input type="checkbox" />
-            <span>Атрибут</span>
+            <input
+              type="checkbox"
+              id="input-checkbox-12"
+              class="input-checkbox"
+            />
+            <label for="input-checkbox-12">Атрибут</label>
           </div>
           <span class="attribute-number">3</span>
         </div>
@@ -176,6 +224,10 @@
           justify-content: space-between;
           align-items: center;
           align-self: stretch;
+
+          :first-child:hover {
+            color: #7397f5;
+          }
         }
         :nth-child(4) {
           border-radius: 5px;
@@ -338,19 +390,47 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+
         .checkbox-left {
           display: flex;
-          gap: 12px;
           align-items: center;
-          input {
-            width: 20px;
-            height: 20px;
+
+          .input-checkbox {
+            display: none;
           }
-          input:checked {
-            content: url("../assets/sidebar-imgs/checked.svg");
-            fill: #7397f5;
-            stroke-width: 1px;
-            stroke: #7397f5;
+
+          label {
+            color: #333;
+            font-family: PT Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+            user-select: none;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 1.3em;
+              height: 1.3em;
+              flex-shrink: 0;
+              flex-grow: 0;
+              border: 1px solid #d5d5d5;
+              border-radius: 3px;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+          }
+
+          label:hover::before {
+            border-color: #7397f5;
+          }
+
+          .input-checkbox[type="checkbox"]:checked + label::before {
+            background-image: url("../assets/sidebar-imgs/checked.svg");
           }
         }
       }

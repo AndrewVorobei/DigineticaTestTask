@@ -398,6 +398,10 @@
 <script setup></script>
 
 <style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 @media screen and (max-width: 1920px) {
   .main-block-mobile {
     display: none;
