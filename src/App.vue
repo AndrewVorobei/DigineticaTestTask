@@ -5,7 +5,7 @@ import Main from "./components/Main.vue";
 
 <template>
   <div class="layout">
-    <Header class="header"></Header>
+    <Header></Header>
     <Main class="main"></Main>
   </div>
 </template>
